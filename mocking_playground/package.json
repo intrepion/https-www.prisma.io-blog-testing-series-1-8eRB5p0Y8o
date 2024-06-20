@@ -3,7 +3,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node ./script.ts",
-    "test": "vitest"
+    "test": "vitest",
+    "test:ci": "vitest run"
   },
   "dependencies": {
     "@prisma/client": "5.15.0",
