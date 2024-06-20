@@ -1,6 +1,9 @@
-// test/sample.test.ts
+//test/sample.test.ts
 import { expect, test } from "vitest";
+import { createUser } from "../script";
 
-test("1 === 1", () => {
-  expect(1).toBe(1);
+test("createUser should return the generated user", async () => {
+  const newUser = { email: "user@prisma.io", name: "Prisma Fan" };
+  const user = await createUser(newUser);
+  expect(user).toStrictEqual({ ...newUser, id: 1 });
 });
